@@ -38,6 +38,7 @@ html {
     width: 100%;
     background-color: var(--black);
     position: fixed;
+    z-index: 99;
 }
 
 .header-main-container .header-container {
