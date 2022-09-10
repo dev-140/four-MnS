@@ -232,7 +232,7 @@ html {
         display: block;
     }
 
-    .header-main-container .header-container .navigation .nav .hamburger-menu i {
+    .header-main-container .header-container .navigation .hamburger-menu i {
         color: var(--white);
         font-size: 24px;
     }
