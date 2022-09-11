@@ -1,0 +1,16 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-shade: #1B1B1B;
+    --green: #02C079;
+    --gray: #9e9e9e;
+}
+
+.home-hero-main-container {
+    background-color: var(--dark-shade);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+}

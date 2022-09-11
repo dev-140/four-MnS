@@ -19,6 +19,7 @@ html {
 /* =====global===== */
 
 .wrapper {
+    padding-top: 112px;
     width: 100%;
     position: relative;
 }
@@ -38,6 +39,7 @@ html {
     width: 100%;
     background-color: var(--black);
     position: fixed;
+    top: 0;
 }
 
 .header-main-container .header-container {
