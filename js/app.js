@@ -1,17 +1,10 @@
-// function hideContent() {
-//     var scrollCOntent = document.getElementsByClassName("animate__animated");
-//     scrollCOntent.classList.add("animate__fadeOutLeftBig");
-// }
-
-// hideContent();
-
 function reveal() {
-    var reveals = document.querySelectorAll(".animate__animated");
+    var reveals = document.querySelectorAll(".animate");
 
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 400;
+        var elementVisible = 300;
 
         if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("animate__fadeInLeft");

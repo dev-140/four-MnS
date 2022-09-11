@@ -113,3 +113,75 @@
     line-height: 253.5%;
     color: var(--black);
 }
+
+.home-third-section-main-container {
+    margin-top: 54px;
+}
+
+.home-third-section-main-container .home-third-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 970px;
+    margin: auto    ;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper:last-child .section-card {
+    flex-direction: row-reverse;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper:last-child .section-card .text-wrapper {
+    border-bottom: 29px solid var(--green);
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper:last-child .section-card .img {
+    margin-right: 0;
+    margin-left: 40px;
+    background-image: url(../images/home-section-3-2.jpeg);
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card .img {
+    width: 465px;
+    height: 390px;
+    margin-right: 40px;
+    background-image: url(../images/home-section-3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card .text-wrapper {
+    width: 417px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card .text-wrapper .section-title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 70px;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card .text-wrapper .section-content {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 253.5%;
+    color: var(--black);
+}
