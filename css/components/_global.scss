@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    padding-top: 104px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 1300px;
+    margin: auto;
+}
+
+.dummy {
+    width: 100%;
+    height: 20cm;
+}
+
+.divider {
+    width: 100vw;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.divider .block{
+    height: 5px;
+    background-color: var(--green);
+    width: 100%;
+    transform: rotate(3deg);
+}
+
+.primary-btn {
+    display: block;
+    height: auto;
+    width: fit-content;
+    border-radius: 8px;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    padding: 10px 12px;
+    text-transform: capitalize;
+    background-color: var(--green);
+    transition: all .2s;
+    position: relative;
+}
+
+.primary-btn .fa {
+    position: absolute;
+    right: 12px;
+    opacity: 0;
+    top: 12px;
+    transition: all .2s;
+}
+
+.primary-btn:hover {
+    padding-right: 40px;
+}
+
+.primary-btn:hover .fa {
+    opacity: 1;
+}
+
+.section-title-card {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 113.5%;
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    padding: 20px;
+    padding-right: 0;
+    padding-left: 36px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.section-title-card::before {
+    content: '';
+    width: 20px;
+    height: 52px;
+    position: absolute;
+    left: 0;
+    background-color: var(--green);
+}
+
+/* =====product cards===== */
+.product-tile {
+    width: 278px;
+    padding: 12px 21px;
+    background-color: var(--light-gray);
+    border-radius: 21px;
+}
+
+.product-tile .prod-img {
+    width: 100%;
+    margin-bottom: 7.3px;
+}
+
+.product-tile .prod-title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20.1705px;
+    line-height: 29px;
+    letter-spacing: -0.015em;
+    text-transform: capitalize;
+    margin-bottom: 16.82px;
+    color: var(--black);
+}
+
+.product-tile .price {
+    font-family: 'Lexend', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.9642px;
+    line-height: 34px;
+    color: var(--black);
+    margin-bottom: 16.5px;
+}

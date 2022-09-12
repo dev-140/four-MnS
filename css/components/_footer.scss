@@ -1,0 +1,85 @@
+/* =====footer===== */
+.footer-main-cotainer {
+    background-color: var(--black);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+
+    .footer-img {
+        width: 300px;
+        height: 400px;
+        background-image: url(../images/footer-img.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 57%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+
+            .section-title {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 21px;
+                line-height: 30px;
+                letter-spacing: -0.015em;
+                color: var(--white);
+                margin-bottom: 20px;
+            }
+            
+            .section-desc {
+                font-family: 'Jost';
+                font-style: normal;
+                color: var(--white);
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: -0.015em;
+                margin-bottom: 10px;
+
+                a {
+                    color: var(--white);
+                }
+            }
+
+            .link-container {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                margin-top: 30px;
+                width: 160px;
+
+                i {
+                    color: var(--white);
+                    font-size: 30px;
+                }
+            }            
+        }
+    }
+    
+}
+
+.copy-right {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+        color: var(--white);
+        font-family: 'Jost';
+    }
+}

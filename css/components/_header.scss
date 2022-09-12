@@ -1,0 +1,54 @@
+/* =====header===== */
+.header-main-container {
+    width: 100%;
+    background-color: var(--black);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .logo {
+            width: 60px;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        .navigation {
+            .nav {
+                list-style: none;
+                display: flex;
+                gap: 50px;
+
+                .nav-item {
+                    padding: 10px;
+
+                    &:hover {
+                        border-bottom: solid 2px var(--green);
+                        padding-bottom: 8px;
+                    }
+
+                    .nav-link {
+                        color: var(--white);
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: 'Jost', sans-serif;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .hamburger-menu {
+                display: none;
+            }
+        }
+    }
+}

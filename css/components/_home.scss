@@ -1,0 +1,182 @@
+.home-hero-main-container {
+    background-color: var(--dark-shade);
+    align-items: center;
+    padding: 100px 0;
+
+    .home-container {
+        display: flex;
+        justify-content: space-between;
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 41.2512px;
+                line-height: 122%;
+                color: var(--white);
+                letter-spacing: -0.02em;
+                text-transform: uppercase;
+            }
+
+            .sub-desc {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 78px;
+                line-height: 122%;
+                color: var(--white);
+                letter-spacing: -0.02em;
+                text-transform: uppercase;
+            }
+
+            .primary-btn {
+                margin-top: 15px;
+            }
+        }
+
+        .hero-banner {
+            width: 100%;
+            max-width: 728.4px;
+            height: 228px;
+            background-image: url(../images/Kitchen-Appliances-Transparent.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+    }
+}
+
+.home-second-section-main-container {
+    margin-top: 100px;
+
+    .home-second-section-container {
+        display: flex;
+        flex-direction: column;
+
+        .section-row {
+            margin-top: 36px;
+            display: flex;
+            justify-content: space-between;
+
+            .section-wrapper {
+                align-items: flex-start;
+                display: flex;
+
+                .section-image {
+                    width: 465px;
+                    height: 390px;
+                    background-image: url(../images/home-section-2-img.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    margin-right: 40px;
+                }
+            }
+
+            .text-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                .section-content-title {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 48px;
+                    line-height: 253.5%;
+                    color: var(--black);
+                    text-transform: uppercase;
+                }
+
+                .section-content {
+                    width: 417px;
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 253.5%;
+                    color: var(--black);
+                }
+            }
+        }
+    }
+}
+
+.home-third-section-main-container {
+    margin-top: 54px;
+
+    .home-third-section-container {
+        display: flex;
+        flex-direction: column;
+        width: 970px;
+        margin: auto;
+
+        .section-cards-wrapper {
+            margin-top: 45px;
+            display: flex;
+            flex-direction: column;
+
+            .section-card {
+                display: flex;
+                justify-content: space-between;
+
+                .img {
+                    width: 465px;
+                    height: 390px;
+                    margin-right: 40px;
+                    background-image: url(../images/home-section-3.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .text-wrapper {
+                    width: 417px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .section-title {
+                        font-family: 'Jost';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 48px;
+                        line-height: 70px;
+                        color: var(--black);
+                        text-transform: uppercase;
+                        margin-bottom: 30px;
+                    }
+
+                    .section-content {
+                        font-family: 'Jost';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 253.5%;
+                        color: var(--black);
+                    }
+                }                
+            }
+
+            &:last-child {
+                .section-card {
+                    flex-direction: row-reverse;
+
+                    .text-wrapper {
+                        border-bottom: 29px solid var(--green);
+                    }
+
+                    .img {
+                        margin-right: 0;
+                        margin-left: 40px;
+                        background-image: url(../images/home-section-3-2.jpeg);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
