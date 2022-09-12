@@ -9,10 +9,14 @@ html {
 }
 
 .wrapper {
-    padding-top: 104px;
+    padding-top: 100px;
     width: 100%;
     position: relative;
     overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 64px;
+    }
 }
 
 .container {
@@ -21,6 +25,14 @@ html {
 
     @include media-breakpoint-down(csXl) {
         width: 1000px;
+    }
+
+    @include media-breakpoint-down(csLg) {
+        width: 80%;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
     }
 }
 

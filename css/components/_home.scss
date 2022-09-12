@@ -3,13 +3,26 @@
     align-items: center;
     padding: 100px 0;
 
+    @include media-breakpoint-down(md) {
+        padding: 50px 20px !important;
+        background-color: white !important;
+    }
+
     .home-container {
         display: flex;
         justify-content: space-between;
 
+        @include media-breakpoint-down(md) {
+            flex-direction: column-reverse;
+        }
+
         .hero-text {
             display: flex;
             flex-direction: column;
+
+            @include media-breakpoint-down(md) {
+                align-items: center;
+            }
 
             .title {
                 font-family: 'Jost';
@@ -20,6 +33,12 @@
                 color: $white;
                 letter-spacing: -0.02em;
                 text-transform: uppercase;
+
+                @include media-breakpoint-down(md) {
+                    color: $black !important;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
             }
 
             .sub-desc {
@@ -31,6 +50,12 @@
                 color: $white;
                 letter-spacing: -0.02em;
                 text-transform: uppercase;
+
+                @include media-breakpoint-down(md) {
+                    color: $black !important;
+                    font-size: 45px !important;
+                    text-align: center;
+                }
             }
 
             .primary-btn {
@@ -46,6 +71,15 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @include media-breakpoint-down(csLg) {
+                max-width: 445px;
+                display: none;
+            }
+            
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
         }
         
     }
@@ -57,6 +91,10 @@
     .home-second-section-container {
         display: flex;
         flex-direction: column;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 20px;
+        }
 
         .section-row {
             margin-top: 36px;
@@ -77,6 +115,16 @@
                 align-items: flex-start;
                 display: flex;
 
+                @include media-breakpoint-down(csXl) {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                @include media-breakpoint-down(md) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
                 .section-image {
                     width: 465px;
                     height: 390px;
@@ -89,6 +137,12 @@
                     @include media-breakpoint-down(csXl) {
                         width: 365px !important;
                         height: 290px !important;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        margin-right: 0 !important;
+                        margin-bottom: 30px;
+                        width: 100% !important;
                     }
                 }
             }
@@ -109,6 +163,10 @@
                     @include media-breakpoint-down(csXl) {
                         line-height: 70px !important;
                     }
+
+                    @include media-breakpoint-down(md) {
+                        text-align: center
+                    }
                 }
 
                 .section-content {
@@ -119,6 +177,10 @@
                     font-size: 14px;
                     line-height: 253.5%;
                     color: $black;
+
+                    @include media-breakpoint-down(md) {
+                        width: 100% !important;
+                    }
                 }
             }
         }
@@ -134,6 +196,14 @@
         width: 970px;
         margin: auto;
 
+        @include media-breakpoint-down(csLg) {
+            width: 100% !important;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 0 20px;
+        }
+
         .section-cards-wrapper {
             margin-top: 45px;
             display: flex;
@@ -143,6 +213,10 @@
                 display: flex;
                 justify-content: space-between;
 
+                @include media-breakpoint-down(md) {
+                    flex-direction: column !important;
+                }
+
                 .img {
                     width: 465px;
                     height: 390px;
@@ -151,12 +225,23 @@
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
+
+                    @include media-breakpoint-down(md) {
+                        margin: 0 !important;
+                        margin-bottom: 0 !important;
+                        width: 100% !important;
+                        height: 323px !important;
+                    }
                 }
 
                 .text-wrapper {
                     width: 417px;
                     display: flex;
                     flex-direction: column;
+
+                    @include media-breakpoint-down(md) {
+                        width: 100%;
+                    }
 
                     .section-title {
                         font-family: 'Jost';
@@ -167,6 +252,11 @@
                         color: $black;
                         text-transform: uppercase;
                         margin-bottom: 30px;
+
+                        @include media-breakpoint-down(md) {
+                            margin-bottom: 0 !important;
+                            width: 100% !important;
+                        }
                     }
 
                     .section-content {
@@ -178,18 +268,26 @@
                         color: $black;
 
                         @include media-breakpoint-down(md) {
-                            width: 317px !important;
+                            width: 100% !important;
                         }
                     }
                 }                
             }
 
             &:last-child {
+                @include media-breakpoint-down(md) {
+                    margin-top: 15px !important;
+                }
+
                 .section-card {
                     flex-direction: row-reverse;
 
                     .text-wrapper {
                         border-bottom: 29px solid $green;
+
+                        @include media-breakpoint-down(md) {
+                            padding-bottom: 30px;
+                        }
                     }
 
                     .img {

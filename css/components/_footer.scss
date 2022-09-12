@@ -23,6 +23,10 @@
         @include media-breakpoint-down(csXl) {
             display: none;
         }
+
+        @include media-breakpoint-down(csLg) {
+            padding: 50px 20px;
+        }
     }
 
     .footer-container {
@@ -30,10 +34,21 @@
         flex-direction: row;
         justify-content: space-between;
 
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+
         .content {
             display: flex;
             flex-direction: column;
             width: 25%;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+                border-bottom: solid 1px $gray;
+            }
 
             .section-title {
                 font-family: 'Jost';
@@ -55,6 +70,10 @@
                 line-height: 23px;
                 letter-spacing: -0.015em;
                 margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
                 a {
                     color: $white;
@@ -86,8 +105,13 @@
     align-items: center;
     justify-content: center;
 
+    @include media-breakpoint-down(md) {
+        padding: 20px 0;
+    }
+
     .text {
         color: $white;
         font-family: 'Jost';
+        margin-bottom: 0;
     }
 }
