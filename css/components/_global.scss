@@ -18,6 +18,10 @@ html {
 .container {
     width: 1300px;
     margin: auto;
+
+    @include media-breakpoint-down(csXl) {
+        width: 1000px;
+    }
 }
 
 .dummy {
@@ -33,7 +37,7 @@ html {
 
 .divider .block{
     height: 5px;
-    background-color: var(--green);
+    background-color: $green;
     width: 100%;
     transform: rotate(3deg);
 }
@@ -43,12 +47,12 @@ html {
     height: auto;
     width: fit-content;
     border-radius: 8px;
-    color: var(--white);
+    color: $white;
     text-decoration: none;
     font-family: 'Lexend', sans-serif;
     padding: 10px 12px;
     text-transform: capitalize;
-    background-color: var(--green);
+    background-color: $green;
     transition: all .2s;
     position: relative;
 }
@@ -75,7 +79,7 @@ html {
     font-weight: 700;
     font-size: 24px;
     line-height: 113.5%;
-    color: var(--green);
+    color: $green;
     text-transform: uppercase;
     font-weight: bold;
     position: relative;
@@ -93,14 +97,14 @@ html {
     height: 52px;
     position: absolute;
     left: 0;
-    background-color: var(--green);
+    background-color: $green;
 }
 
 /* =====product cards===== */
 .product-tile {
     width: 278px;
     padding: 12px 21px;
-    background-color: var(--light-gray);
+    background-color: $light-gray;
     border-radius: 21px;
 }
 
@@ -118,7 +122,7 @@ html {
     letter-spacing: -0.015em;
     text-transform: capitalize;
     margin-bottom: 16.82px;
-    color: var(--black);
+    color: $black;
 }
 
 .product-tile .price {
@@ -127,6 +131,6 @@ html {
     font-weight: 400;
     font-size: 26.9642px;
     line-height: 34px;
-    color: var(--black);
+    color: $black;
     margin-bottom: 16.5px;
 }

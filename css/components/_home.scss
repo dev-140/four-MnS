@@ -1,5 +1,5 @@
 .home-hero-main-container {
-    background-color: var(--dark-shade);
+    background-color: $dark-shade;
     align-items: center;
     padding: 100px 0;
 
@@ -17,7 +17,7 @@
                 font-weight: 500;
                 font-size: 41.2512px;
                 line-height: 122%;
-                color: var(--white);
+                color: $white;
                 letter-spacing: -0.02em;
                 text-transform: uppercase;
             }
@@ -28,7 +28,7 @@
                 font-weight: 700;
                 font-size: 78px;
                 line-height: 122%;
-                color: var(--white);
+                color: $white;
                 letter-spacing: -0.02em;
                 text-transform: uppercase;
             }
@@ -63,6 +63,16 @@
             display: flex;
             justify-content: space-between;
 
+            @include media-breakpoint-down(csXl) {
+                justify-content: center !important;
+            }
+
+            .product-tile    {
+                @include media-breakpoint-down(csXl) {
+                    display: none;
+                }
+            }
+        
             .section-wrapper {
                 align-items: flex-start;
                 display: flex;
@@ -75,6 +85,11 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     margin-right: 40px;
+
+                    @include media-breakpoint-down(csXl) {
+                        width: 365px !important;
+                        height: 290px !important;
+                    }
                 }
             }
 
@@ -88,8 +103,12 @@
                     font-weight: 500;
                     font-size: 48px;
                     line-height: 253.5%;
-                    color: var(--black);
+                    color: $black;
                     text-transform: uppercase;
+
+                    @include media-breakpoint-down(csXl) {
+                        line-height: 70px !important;
+                    }
                 }
 
                 .section-content {
@@ -99,7 +118,7 @@
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 253.5%;
-                    color: var(--black);
+                    color: $black;
                 }
             }
         }
@@ -145,7 +164,7 @@
                         font-weight: 500;
                         font-size: 48px;
                         line-height: 70px;
-                        color: var(--black);
+                        color: $black;
                         text-transform: uppercase;
                         margin-bottom: 30px;
                     }
@@ -156,7 +175,11 @@
                         font-weight: 500;
                         font-size: 14px;
                         line-height: 253.5%;
-                        color: var(--black);
+                        color: $black;
+
+                        @include media-breakpoint-down(md) {
+                            width: 317px !important;
+                        }
                     }
                 }                
             }
@@ -166,7 +189,7 @@
                     flex-direction: row-reverse;
 
                     .text-wrapper {
-                        border-bottom: 29px solid var(--green);
+                        border-bottom: 29px solid $green;
                     }
 
                     .img {

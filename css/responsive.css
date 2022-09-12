@@ -9,32 +9,9 @@
 
 /* =====meadia queries=====  */
 @media only screen and (max-width: 1300px) {
-    .container {
-      width: 1000px;
-    }
-
     /* home */
-    .home-second-section-main-container .home-second-section-container .section-row {
-        justify-content: center !important;
-    }
-
-    .home-second-section-main-container .home-second-section-container .section-row .section-wrapper .section-image {
-        width: 365px !important;
-        height: 290px !important;
-    }
-
-    .home-second-section-main-container .home-second-section-container .section-row .text-wrapper .section-content-title {
-        line-height: 70px !important;
-    }
-
-    .home-second-section-main-container .home-second-section-container .section-row .text-wrapper .section-content {
-        width: 317px !important;
-    }
     
-    .home-second-section-main-container .home-second-section-container .section-row .product-tile    {
-        display: none;
-    }
-
+    .home-second-section-main-container .home-second-section-container .section-row 
     /* footer */
     .footer-main-cotainer {
         padding: 50px 0;
