@@ -30,6 +30,7 @@ $(document).ready(function() {
     $('.nav-item').on('click', (e)=> {
         $('.nav').removeClass('active');
         $('.nav-item').removeClass('animate__bounce');
+        $('.hamburger-menu i').removeClass('fa-xmark');
     })
 
     if ($(window).width() < 768) {

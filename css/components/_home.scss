@@ -35,7 +35,7 @@
                 text-transform: uppercase;
 
                 @include media-breakpoint-down(md) {
-                    color: $black !important;
+                    color: $black  !important;
                     text-align: center;
                     margin-bottom: 30px;
                 }
@@ -52,7 +52,7 @@
                 text-transform: uppercase;
 
                 @include media-breakpoint-down(md) {
-                    color: $black !important;
+                    color: $black  !important;
                     font-size: 45px !important;
                     text-align: center;
                 }
@@ -76,12 +76,12 @@
                 max-width: 445px;
                 display: none;
             }
-            
+
             @include media-breakpoint-down(md) {
                 display: block;
             }
         }
-        
+
     }
 }
 
@@ -105,12 +105,12 @@
                 justify-content: center !important;
             }
 
-            .product-tile    {
+            .product-tile {
                 @include media-breakpoint-down(csXl) {
                     display: none;
                 }
             }
-        
+
             .section-wrapper {
                 align-items: flex-start;
                 display: flex;
@@ -271,7 +271,7 @@
                             width: 100% !important;
                         }
                     }
-                }                
+                }
             }
 
             &:last-child {
@@ -295,7 +295,126 @@
                         margin-left: 40px;
                         background-image: url(../images/home-section-3-2.jpeg);
                     }
-                    
+
+                }
+            }
+        }
+    }
+}
+
+.contact-main-container {
+    display: flex;
+    padding: 100px 0;
+    background-color: $green;
+
+    .contact-container {
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+
+        @include media-breakpoint-down(md) {
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            color: $green;
+            margin-bottom: 49px;
+            text-transform: capitalize;
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 25px;
+            border-bottom: solid 3px $green;
+            padding-bottom: 10px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 422px;
+
+            .contact-label {
+                font-weight: bold;
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 21px;
+                margin-bottom: 0;
+            }
+
+            input {
+                font-size: 16px;
+                padding: 5px;
+                text-transform: capitalize;
+                border: 2px solid $gray;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+                
+                &::placeholder {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: $gray;
+                    line-height: 21px;
+                }
+
+                &:focus {
+                    border: solid 2px $green;
+                }
+            }
+
+            
+
+            .text-area {
+                height: 137px !important;
+                border: 2px solid $gray;
+                border-radius: 5px;
+                padding: 5px;
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                color: $gray;
+                line-height: 21px;
+                outline: none;
+
+                &::placeholder {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: $gray;
+                    line-height: 21px;
+                }
+
+                &:focus {
+                    border: solid 2px $green;
+                }
+            }
+            
+            .btn {
+                background-color: $green;
+                font-family: "Jost";
+                font-weight: 500;
+                text-transform: capitalize;
+                width: 100%;
+                padding: 5px;
+                font-size: 20px;
+                color: $white;
+                transition: all 0.25;
+
+                &:hover {
+                    opacity: 0.5;
                 }
             }
         }

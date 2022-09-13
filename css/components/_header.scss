@@ -53,6 +53,8 @@
                     &.active {
                         top: 60px;
                         opacity: 1;
+                        height: 100vh;
+                        background-color: #000000db;
                     }
                 }
 
@@ -72,6 +74,36 @@
                         font-family: 'Jost', sans-serif;
                         letter-spacing: 2px;
                         font-weight: bold;
+
+                        @include media-breakpoint-down(md) {
+                            font-size: 26px;
+                            border-bottom: solid 1px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+
+                .nav-social-icons {
+                    display: none;
+                    padding: 0 10px;
+                    justify-content: center;
+                    gap: 10%;
+                    margin-top: 50px;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            color: $white;
+
+                            i {
+                                font-size: 45px;
+                            }
+                        }
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        display: flex;
                     }
                 }
             }
