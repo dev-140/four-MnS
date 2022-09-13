@@ -5,7 +5,7 @@ $(document).ready(function() {
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 300;
+            var elementVisible = 200;
     
             if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("animate__fadeInLeft");
@@ -39,5 +39,14 @@ $(document).ready(function() {
 
     $(window).on('resize', function() {
         $('.nav').removeClass('active');
+    });
+
+    $('.about-cards-container.mobile-container-about').slick({
+        infinite: false,
+        slidesToShow: 1.2,
+        slidesToScroll: 1,
+        prevArrow: false,
+        nextArrow: false,
+        adaptiveHeight: true
     });
 });
