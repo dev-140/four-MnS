@@ -47,6 +47,5 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: false,
         nextArrow: false,
-        adaptiveHeight: true
     });
 });
