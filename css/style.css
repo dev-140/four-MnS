@@ -13177,8 +13177,11 @@ fieldset:disabled .btn {
 
 @media (max-width: 767.98px) {
   .home-third-section-main-container .home-third-section-container .section-cards-wrapper .section-card .text-wrapper .section-title {
-    margin-bottom: 0 !important;
+    margin-bottom: 10px !important;
     width: 100% !important;
+    font-size: 26px !important;
+    line-height: 26px !important;
+    margin-top: 10px;
   }
 }
 
