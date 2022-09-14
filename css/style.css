@@ -13597,6 +13597,63 @@ fieldset:disabled .btn {
   margin-top: 47px;
 }
 
+.plp-bg {
+  background-image: url(../images/plp-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.plp-bg .plp-banner-main-container {
+  height: 448px;
+  width: 100%;
+  background-color: #00000073;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plp-bg .plp-banner-main-container .plp-container {
+  height: 100%;
+}
+
+.plp-bg .plp-banner-main-container .plp-container .page-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 41.2512px;
+  line-height: 122%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.plp-bg .plp-banner-main-container .plp-container .page-sub-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 122%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.product-main-container {
+  padding: 50px 0;
+}
+
+.product-main-container .product-container {
+  gap: 30px 10%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 * {
   margin: 0;
   padding: 0;

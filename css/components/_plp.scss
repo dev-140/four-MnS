@@ -1,0 +1,48 @@
+.plp-bg {
+    background-image: url(../images/plp-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .plp-banner-main-container {
+        height: 448px;
+        width: 100%;
+        background-color: #00000073;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        .plp-container {
+            height: 100%;
+    
+            .page-title {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 41.2512px;
+                line-height: 122%;
+                color: $white;
+                text-transform: uppercase;
+            }
+    
+            .page-sub-title {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 68px;
+                line-height: 122%;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.product-main-container {
+    padding: 50px 0;
+
+    .product-container {
+        gap: 30px 10%;
+        flex-wrap: wrap;
+    }
+}
