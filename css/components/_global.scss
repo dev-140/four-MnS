@@ -119,31 +119,36 @@ html {
     padding: 12px 21px;
     background-color: $light-gray;
     border-radius: 21px;
+
+    .prod-img {
+        width: 100%;
+        margin-bottom: 7.3px;
+    }
+
+    .prod-title {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20.1705px;
+        line-height: 29px;
+        letter-spacing: -0.015em;
+        text-transform: capitalize;
+        margin-bottom: 16.82px;
+        color: $black;
+    }
+
+    .price {
+        font-family: 'Lexend', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26.9642px;
+        line-height: 34px;
+        color: $black;
+        margin-bottom: 16.5px;
+    }
 }
 
-.product-tile .prod-img {
-    width: 100%;
-    margin-bottom: 7.3px;
-}
-
-.product-tile .prod-title {
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20.1705px;
-    line-height: 29px;
-    letter-spacing: -0.015em;
-    text-transform: capitalize;
-    margin-bottom: 16.82px;
-    color: $black;
-}
-
-.product-tile .price {
-    font-family: 'Lexend', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26.9642px;
-    line-height: 34px;
-    color: $black;
-    margin-bottom: 16.5px;
+.jump-link {
+    margin-top: -117px;
+    position: absolute;
 }
