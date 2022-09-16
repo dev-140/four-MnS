@@ -44,5 +44,9 @@
     .product-container {
         gap: 30px 10%;
         flex-wrap: wrap;
+
+        .product-link-wrapper {
+            text-decoration: none;
+        }
     }
 }

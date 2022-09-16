@@ -89,12 +89,13 @@ $(document).ready(function() {
             var url = getData[keys[i]].url;
             var img = getData[keys[i]].img;
 
-            $('.product-container').append('<div class="product-tile"> <img src="product-images/'+img+'" alt="" class="prod-img"> <p class="prod-title">'+desc+'</p> <p class="price">'+price+'</p> <a href="pdp.html?'+url+'" class="primary-btn">view <i class="fa fa-arrow-right"></i></a> </div>');
+            $('.product-container').append('<a href="pdp.html?'+url+'" class="product-link-wrapper"><div class="product-tile"> <img src="product-images/'+img+'" alt="" class="prod-img"> <p class="prod-title">'+desc+'</p> <p class="price">P'+price+'</p> <p class="primary-btn">view <i class="fa fa-arrow-right"></i></p> </div></a>');
         }
     }
 
     if (urlLoc === 'plp.html') {
         renderAllProds();
     }
+
 });
 
