@@ -105,17 +105,39 @@ $(document).ready(function() {
     var stingUrl = urlLoc.split('?');
     var finalUrl = stingUrl[stingUrl.length-2];
 
+    // randon item
+    const keysProd = Object.keys(getData)
+
+    function randomKey(keysProd) {
+        return keysProd[Math.floor(Math.random() * keysProd.length)]
+    }
+
     renderData = function() {
         var url = $(location).attr('href'),
             parts = url.split('?'),
-            lastPart = parts[parts.length-1];
+            lastPart = parts[parts.length-1],
+            rawPrice = getData[lastPart].price,
+            filteredPrice = rawPrice.replace(",", "")
+            totalPrice = parseInt(filteredPrice) + 500;
 
-        $('.pdp .title').text(getData[lastPart].title);
-        $('.pdp .desc').text(getData[lastPart].shortDesc);
-        $('.pdp .price').text(getData[lastPart].price);
+        // for pdp fetching data
+        $('.pdp-main-container .product-title').text(getData[lastPart].title);
+        $('.pdp-main-container .product-description').text(getData[lastPart].desc);
+        $('.pdp-main-container .product-price').text('P' + getData[lastPart].price);
+        $('.pdp-main-container .checkout').attr('href', 'checkout.html?' + getData[lastPart].url);
+        $('.pdp-main-container .prod-img').attr('src', 'product-images/' + getData[lastPart].img);
+
+        //for checkout data
+        $('.checkout-main-container .item-name-checkout').text(getData[lastPart].title);
+        $('.checkout-main-container .item-price-checkout').text(getData[lastPart].price);
+        $('.checkout-main-container .total-price').text('P' + totalPrice.toLocaleString());
     }
 
     if (finalUrl === 'pdp.html') {
+        renderData();
+    }
+
+    if (finalUrl === 'checkout.html') {
         renderData();
     }
 
@@ -134,6 +156,59 @@ $(document).ready(function() {
 
     if (urlLoc === 'plp.html') {
         renderAllProds();
+    }
+
+    //adding data on local storage for order history
+    checkInput = function() {
+        var val = $('');
+
+        $('.checkout-main-container input').each(function() {
+            if(!$(this).val()){
+                $('.checkout-container .form .cta').addClass('disabled');
+                $('.checkout-container .form .cta').removeAttr('href');
+            } else {
+                $('.checkout-container .form .cta').removeClass('disabled');
+                $('.checkout-container .form .cta').attr('href', 'order.html');
+            }
+        });
+    }
+
+    setInterval(function () {
+        checkInput();
+    },);
+
+    $('.confirm-payment').on('click', (e)=> {
+        var name = $('.client-firstName').val().trim() + ' ' + $('.client-lastName').val().trim();
+        var address = $('.client-town').val().trim() + ' ' + $('.client-street').val().trim();
+        var number = $('.client-number').val();
+        var item = $('.clientItem').text();
+        var total = $('.clientTotalPrice').text().trim();
+
+        localStorage.setItem('clientName', name);
+        localStorage.setItem('clientAddress', address);
+        localStorage.setItem('clientItem', item);
+        localStorage.setItem('clientNumber', number);
+        localStorage.setItem('clientTotal', total);
+        localStorage.setItem('orderStatus', 'true');
+    });
+
+    orderHistory = function() {
+        var name = localStorage.getItem('clientName');
+        var address = localStorage.getItem('clientAddress');
+        var number = localStorage.getItem('clientNumber');
+        var item = localStorage.getItem('clientItem');
+
+        $('.order-main-container .client-name').text(name);
+        $('.order-main-container .client-address').text(address);
+        $('.order-main-container .client-phone').text(number);
+        $('.order-main-container .client-item').text(item);
+    }
+
+    orderHistory();
+
+    var orderStatus = localStorage.getItem('orderStatus');
+    if (orderStatus === 'true') {
+        $('.order-link').removeClass('d-none')
     }
 
 });

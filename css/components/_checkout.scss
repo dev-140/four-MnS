@@ -1,0 +1,126 @@
+.checkout-main-container {
+    background-color: $green;
+    padding: 100px 0;
+
+    .checkout-container {
+        background-color: $white;
+        padding: 50px 20px;
+        border-radius: 10px;
+
+        .section-title {
+            color: $green;
+            text-transform: uppercase;
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+        
+        .form {
+            padding: 20px;
+
+            .input-container {
+                padding: 10px;
+            }
+
+            .label {
+                font-family: 'Jost';
+                color: $black;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20.1705px;
+                line-height: 29px;
+                letter-spacing: -0.015em;
+                margin-bottom: 5px;
+            }
+
+            input {
+                outline: none;
+                border: solid 2px $gray;
+                padding: 5px;
+                font-family: 'Jost';
+
+                &:focus {
+                    border-color: $green;
+                }
+            }
+
+            .cta {
+                margin-top: 30px;
+
+                &.disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        .prodcut-item {
+            padding: 20px;
+
+            .label {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            .value {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            .total-container {
+                margin-top: 30px;
+                border-top: solid 2px $black;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+.order-main-container {
+    padding: 100px 0;
+    background-color: $green;
+
+    .order-container {
+        padding: 50px 20px;
+        border-radius: 10px;
+        background-color: $white;
+
+        .history-container {
+            padding: 20px;
+            border-radius: 10px;
+            border: solid 2px $green;
+
+            .section-title {
+                color: $green;
+                text-transform: uppercase;
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                border-radius: 10px;
+            }
+
+            .label {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+
+            .value {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

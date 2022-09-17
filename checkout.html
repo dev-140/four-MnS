@@ -10,11 +10,12 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://kit.fontawesome.com/f12e1741fd.js" crossorigin="anonymous"></script>
-    <title>4-MnS Product lists</title>
+    <title>4-MnS Checout</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
 </head>
 <body>
     <!-- Header Section -->
+    <div class="cursor"></div>
     <div class="wrapper">
         <div class="header-main-container">
             <div class="container">
@@ -30,7 +31,6 @@
                             <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
                             <li class="nav-item"><a href="plp.html" class="nav-link">shop</a></li>
                             <li class="nav-item"><a href="Developers_AboutUs-HTML/about-us.html" class="nav-link">about us</a></li>
-                            <li class="nav-item"><a href="order.html" class="nav-link order-link d-none">order</a></li>
 
                             <ul class="nav-social-icons">
                                 <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
@@ -45,32 +45,87 @@
         </div>
         <!-- Header Section End -->
 
-        <!-- Hero Banner Section -->
-        <div class="plp-bg">
-            <div class="plp-banner-main-container">
-                <div class="container">
-                    <div class="plp-container">
-                        <p class="page-title">High-end</p>
-                        <p class="page-sub-title">APPLIANCES</p>
+        <div class="checkout-main-container">
+            <div class="container">
+                <div class="checkout-container d-flex flex-column flex-md-row justify-content-center">
+                    <div class="form d-flex flex-column col-12 col-md-6">
+                        <p class="section-title">Checkout <i class="fa-sharp fa-solid fa-bag-shopping"></i></p>
+
+                        <div class="input-group d-flex flex-column flex-md-row justify-content-between">
+                            <div class="input-container d-flex flex-column col-12 col-md-6">
+                                <p class="label">First Name</p>
+                                <input type="text" class="client-firstName">
+                            </div>
+
+                            <div class="input-container d-flex flex-column col-12 col-md-6">
+                                <p class="label">Last Name</p>
+                                <input type="text" class="client-lastName">
+                            </div>
+                        </div>
+
+                        <div class="input-group d-flex flex-column flex-md-row justify-content-between">
+                            <div class="input-container d-flex flex-column col-12 col-md-6">
+                                <p class="label">Town/City</p>
+                                <input type="text" class="client-town">
+                            </div>
+
+                            <div class="input-container d-flex flex-column col-12 col-md-6">
+                                <p class="label">Street</p>
+                                <input type="text" class="client-street">
+                            </div>
+                        </div>
+
+                        <div class="input-group d-flex flex-column flex-md-row">
+                            <div class="input-container d-flex flex-column col-12">
+                                <p class="label">Phone Number</p>
+                                <input type="number" class="client-number">
+                            </div>
+                        </div>
+
+                        <div class="input-group d-flex flex-column flex-md-row">
+                            <div class="input-container d-flex flex-column col-12">
+                                <p class="label">Card</p>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="row d-flex justify-content-center">
+                            <a href="order.html" class="cta confirm-payment primary-btn">Confirm <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="prodcut-item col-12 col-md-6">
+                        <p class="section-title">Item Details <i class="fa-solid fa-cart-shopping"></i></p>
+
+                        <div class="item-info-container d-flex justify-content-between">
+                            <p class="label item-name-checkout clientItem"></p>
+                            <p class="value item-price-checkout">P1200</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="label">Quantity</p>
+                            <p class="value">1</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="label">Shipping Fee</p>
+                            <p class="value">P500</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="label">Discount</p>
+                            <p class="value">P0</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between total-container">
+                            <p class="label">Total</p>
+                            <p class="value total-price clientTotalPrice"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Hero Banner Section End -->
-
-        <div class="product-main-container">
-            <div class="container">
-                <div class="product-container d-flex flex-row justify-content-center">
-                    <!-- <div class="product-tile">
-                        <img src="images/air-conditioner.jpeg" alt="" class="prod-img">
-                        <p class="prod-title"></p>
-                        <p class="price">P549.00</p>
-                        <a href="" class="primary-btn">view <i class="fa fa-arrow-right"></i></a>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
+        
         <div class="jump-link" id="contacts"></div>
         <!-- Contact Section -->
         <div class="contact-main-container">
@@ -97,7 +152,7 @@
                 <div class="footer-container">
                     <div class="content">
                         <p class="section-title">Information about <b>Our Company</b></p>
-                        <p class="section-desc">It started out as a means to help the sudden effect of the COVID-19 crisis to the slowing economic activity. As more and more people are embracing social distancing, the development of this e-commerce website has helped countless families on having access to the online shopping market more than ever before. This has become to be one of the reasons why our company is known for providing convenient and fast services to our customers with the use of emerging technologies.</p>
+                        <p class="section-desc">It started out as a means to help the sudden effect of the COVID-19 crisis to the slowing economic activity. As more and more people are embracing social distancing, the development of this e-commerce website has helped countless families on having access to the online shopping market more than ever before.</p>
                     </div>
                     <div class="content">
                         <p class="section-title">Support Information</p>
