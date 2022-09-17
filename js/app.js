@@ -105,7 +105,7 @@ $(document).ready(function() {
     var stingUrl = urlLoc.split('?');
     var finalUrl = stingUrl[stingUrl.length-2];
 
-    // randon item
+    // randon item //
     const keysProd = Object.keys(getData)
 
     function randomKey(keysProd) {
