@@ -35,23 +35,35 @@ $(document).ready(function() {
 
     if ($(window).width() < 768) {
         $('.nav-item').addClass('animate__animated');
+
+        $('.about-cards-container.mobile-container-about').slick({
+            infinite: false,
+            slidesToShow: 1.2,
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+        });
     }
 
     $(window).on('resize', function() {
         $('.nav').removeClass('active');
-    });
 
-    // slick slider settings
-    $('.about-cards-container.mobile-container-about').slick({
-        infinite: false,
-        slidesToShow: 1.2,
-        slidesToScroll: 1,
-        prevArrow: false,
-        nextArrow: false,
+        if ($(window).width() < 768) {
+            $('.nav-item').addClass('animate__animated');
+
+            $('.about-cards-container.mobile-container-about').slick({
+                infinite: false,
+                slidesToShow: 1.2,
+                slidesToScroll: 1,
+                prevArrow: false,
+                nextArrow: false,
+            });
+        } else {
+            $('.about-cards-container.mobile-container-about').slick('unslick');
+        }
     });
 
     // product rendering data
-
     // product datas
     // : { title: '', shortDesc: '', desc: "", price: '', img: '', url: ''}
     var getData = {
@@ -74,8 +86,8 @@ $(document).ready(function() {
         electricFan: { title: 'Electric Fan', shortDesc: 'Perfect for hot and humid days!', desc: "Get superior air circulation all day long. This electric fan features a 16” (405mm) fan blade that gives you maximum comfort with minimum energy consumption and cost due to a Motor of 65W. It has a 4 speed and a Fan speed of 1,300 RPM which is perfect for your summer needs.", price: '3,270', img: 'electric-fan.png', url: 'electricFan'},
         dishwasher: { title: 'Dishwasher', shortDesc: 'A dish cleaning machine.', desc: "This dishwasher boasts 6 wash programs which are intensive, normal, eco, glass, 90 min, rapid. Also it has a push button program selector, 6 place settings, delay start (2h/4h/8h), child lock,program indicator, rinse aid and salt warning indicator, and progress indicator. Other notable features are its noise level: 49 db, free standing, and program duration: 30 min minimum up to 180min maximum.", price: '31,029', img: 'dishwasher.png', url: 'dishwasher'},
         refrigerator: { title: 'Refrigerator', shortDesc: 'It keeps foods fresh and drinks cool.', desc: "It stores meats and fishes in the optimal condition (up to -1 ℃) to keep them fresh for a longer period of time. it allows you to adjust the shelf depending on the use of your environment. It is a top freezer direct cool inverter type with a capacity of freezer: 79 l and fresh food: 132 l. has a defrost system which can be started manually with the defrost button.", price: '13,495', img: 'refrigerator.png', url: 'refrigerator'},
-        freezerInverter: { title: '', shortDesc: 'Automatic inverter cooling system that consumes less electricity.', desc: "This inverter freezer has a low energy consumption which is 6.0 php/day! not only that but it also boasts 3 in 1 function: chilling, freezing,  fast freezing. Also r600a is an environmentally friendly refrigerant, has a manual defrost and a solid top door with sliding glass door.", price: '16,995', img: 'freezer-inverter.png', url: 'freezerInverter'},
-        airConditioner: { title: '', shortDesc: 'Can create comfort conditions by controlling the temperature for you.', desc: "This air conditioner has a double clean system which reduces maintenance frequency by 50%, and a self cleaning function that prevents build up of mold and germs that cause odor by drying the coil for 30 mins upon turning the unit off. It is manual control, has 2 airway flow cooling, an anti-corrosive base pan, a 2 speed cooling control, and a multi-pore filter.", price: '11,850', img: 'air-conditioner.png', url: 'airConditioner'},
+        freezerInverter: { title: 'Freezer Inverter', shortDesc: 'Automatic inverter cooling system that consumes less electricity.', desc: "This inverter freezer has a low energy consumption which is 6.0 php/day! not only that but it also boasts 3 in 1 function: chilling, freezing,  fast freezing. Also r600a is an environmentally friendly refrigerant, has a manual defrost and a solid top door with sliding glass door.", price: '16,995', img: 'freezer-inverter.png', url: 'freezerInverter'},
+        airConditioner: { title: 'Air Conditioner', shortDesc: 'Can create comfort conditions by controlling the temperature for you.', desc: "This air conditioner has a double clean system which reduces maintenance frequency by 50%, and a self cleaning function that prevents build up of mold and germs that cause odor by drying the coil for 30 mins upon turning the unit off. It is manual control, has 2 airway flow cooling, an anti-corrosive base pan, a 2 speed cooling control, and a multi-pore filter.", price: '11,850', img: 'air-conditioner.png', url: 'airConditioner'},
         breadToaster: { title: 'Bread Toaster', shortDesc: 'Can easily toast bread, waffles, bagels, and more in just a minute or two.', desc: "This bread toaster is a 2-slice stainless steel toaster with a slide out crumb tray, a variable temperature control, a cord storage, and a 4cm wide bread slot.", price: '1,490', img: 'bread-toaster.png', url: 'breadToaster'},
         riceCooker: { title: 'Rice Cooker', shortDesc: 'Appliances that are designed to boil or steam rice.', desc: "It has a 1.0 liter capacity with a soft touch switch for cook and warm functions. features a removable non-stick inner pot with rice and water level indicator, a durable stainless steel body and it includes a steamer tray, rice spoon, and measuring cup.", price: '975', img: 'rice-cooker.png', url: 'riceCooker'},
         pressureCooker: { title: ' Pressure Cooker', shortDesc: 'Pressure cookers cook food quickly, deeply and evenly.', desc: "It has a capacity of 9 liters, which is easy to clean. It features an automatic safety device for opening and closing, a safety window in cover that releases steam of excess pressure therefore making it cooks faster, while saving time and energy. also it is made of super aluminum alloy", price: '2,200', img: 'pressure-cooker.png', url: 'pressureCooker'},
